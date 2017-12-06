@@ -30,19 +30,19 @@ def define_gestures():
 
     dictionary = {}
 
-    v = Gesture("V")
+    v = Gesture("V Sign")
     v.set_palm((475, 225), 45)
     v.set_finger_position([(490, 90), (415, 105)])
     v.calculate_angles()
     dictionary[v.get_name()] = v
 
-    l_right = Gesture("L_Right")
+    l_right = Gesture("L Sign")
     l_right.set_palm((475, 225), 50)
     l_right.set_finger_position([(450, 62), (345, 200)])
     l_right.calculate_angles()
     dictionary[l_right.get_name()] = l_right
 
-    index_pointing = Gesture("Index_Pointing")
+    index_pointing = Gesture("Index Pointing")
     index_pointing.set_palm((480, 230), 43)
     index_pointing.set_finger_position([(475, 102)])
     index_pointing.calculate_angles()
@@ -102,4 +102,4 @@ def decide_gesture(source, gesture_dictionary):
         if result != 0:
             return result
 
-    return "NONE"
+    return "None"
