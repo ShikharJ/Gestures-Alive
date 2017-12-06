@@ -278,7 +278,7 @@ while (1):
             hand_histogram = hand_region_capture(frame_original, box_position_x, box_position_y)
     # Capture background by pressing 'b'
     elif interrupt & 0xFF == ord('b'):
-        background_model = opencv.createBackgroundSubtractorMOG2(0, 10)
+        background_model = opencv.createBackgroundSubtractorMOG2()
         background_captured = 1
     # Reset captured hand by pressing 'r'
     elif interrupt & 0xFF == ord('r'):
